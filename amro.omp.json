@@ -1,0 +1,134 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#0CA0D8",
+          "style": "plain",
+          "template": "{{ if .SSHSession }}\uf817 {{ end }}\uf508 {{ .UserName }}",
+          "type": "session"
+        },
+        {
+          "foreground": "#0CA0D8",
+          "properties": {
+            "folder_separator_icon": "/",
+            "style": "full"
+          },
+          "style": "plain",
+          "template": " \uf07b {{ .Path }}",
+          "type": "path"
+        },
+        {
+          "foreground": "#f3722c",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "fetch_stash_count": true,
+            "fetch_upstream_icon": true
+          },
+          "style": "plain",
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \udb80\udd93 {{ .StashCount }}{{ end }}",
+          "type": "git"
+        },
+        {
+          "type": "php",
+          "style": "plain",
+          "foreground": "#4063D8",
+          "template": " \udb80\udf1f {{ .Full }}"
+        },
+        {
+          "foreground": "#339933",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "plain",
+          "template": " \udb80\udf99 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }}{{ end }}{{ .Full }}",
+          "type": "node"
+        },
+        {
+          "type": "java",
+          "style": "plain",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#ed8b00",
+          "template": " \uE738{{ .Full }}"
+        },
+        {
+          "type": "go",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "plain",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#00ADD8",
+          "template": " \uFCD1{{ .Full }}"
+        },
+        {
+          "type": "flutter",
+          "style": "plain",
+          "foreground": "#0553B1",
+          "template": " \ue28e{{ .Full }}"
+        },
+        {
+          "type": "angular",
+          "style": "plain",
+          "foreground": "#c3002f",
+          "template": " \uE753{{ .Full }}"
+        },
+        {
+          "type": "python",
+          "style": "plain",
+          "foreground": "#906cff",
+          "template": " \uE235{{ .Full }}"
+        },
+        {
+          "type": "ruby",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "plain",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#cc0000",
+          "template": " \uE791{{ .Full }}"
+        },
+        {
+          "type": "aws",
+          "style": "plain",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#FF9900",
+          "template": " \uE7AD{{.Profile}}{{if .Region}}@{{.Region}}{{end}}"
+        },
+        {
+          "foreground": "#b4418e",
+          "properties": {
+            "time_format": "3:04 PM"
+          },
+          "style": "plain",
+          "template": " [{{ .CurrentDate | date .Format }}]",
+          "type": "time"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#cd5e42",
+          "style": "plain",
+          "template": "\ue3bf ",
+          "type": "root"
+        },
+        {
+          "foreground": "#bbbbbb",
+          "style": "plain",
+          "template": "🚀 ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}
