@@ -92,6 +92,12 @@
           "template": " \uE791{{ .Full }}"
         },
         {
+          "type": "bun",
+          "style": "plain",
+          "foreground": "#3C82F6",
+          "template": " 🥟 {{ .Full }}"
+        },
+        {
           "type": "aws",
           "style": "plain",
           "powerline_symbol": "\uE0B0",
@@ -106,12 +112,6 @@
           "style": "plain",
           "template": " [{{ .CurrentDate | date .Format }}]",
           "type": "time"
-        },
-        {
-          "type": "bun",
-          "style": "plain",
-          "foreground": "#3C82F6",
-          "template": " 🥟 {{ .Full }}"
         }
       ],
       "type": "prompt"
