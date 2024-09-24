@@ -106,6 +106,12 @@
           "style": "plain",
           "template": " [{{ .CurrentDate | date .Format }}]",
           "type": "time"
+        },
+        {
+          "type": "bun",
+          "style": "plain",
+          "foreground": "#3C82F6",
+          "template": " 🥟 {{ .Full }}"
         }
       ],
       "type": "prompt"
