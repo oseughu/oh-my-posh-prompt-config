@@ -1,22 +1,24 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 4,
+
+  "pwd": "{{ if .Env.WT_SESSION }}osc99{{ else }}osc7{{ end }}",
+
+  "cursor_style": "steady_block",
+
   "blocks": [
     {
       "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "properties": {
-            "cache_duration": "none"
-          },
           "template": "{{ if .SSHSession }}\uf817 {{ end }}\uf508 {{ .UserName }}",
           "foreground": "#0CA0D8",
           "type": "session",
           "style": "plain"
         },
         {
-          "properties": {
-            "cache_duration": "none",
+          "options": {
             "folder_separator_icon": "/",
             "style": "full"
           },
@@ -26,11 +28,6 @@
           "style": "plain"
         },
         {
-          "properties": {
-            "cache_duration": "none",
-            "fetch_stash_count": true,
-            "fetch_upstream_icon": true
-          },
           "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \udb80\udd93 {{ .StashCount }}{{ end }}",
           "foreground": "#f3722c",
           "powerline_symbol": "\ue0b0",
@@ -38,7 +35,7 @@
           "style": "plain"
         },
         {
-          "properties": {
+          "options": {
             "cache_duration": "none"
           },
           "template": " \udb80\udf1f {{ .Full }}",
@@ -47,7 +44,7 @@
           "style": "plain"
         },
         {
-          "properties": {
+          "options": {
             "cache_duration": "none",
             "fetch_version": true
           },
@@ -57,7 +54,7 @@
           "style": "plain"
         },
         {
-          "properties": {
+          "options": {
             "cache_duration": "none"
           },
           "template": " \ue738{{ .Full }}",
@@ -67,7 +64,7 @@
           "style": "plain"
         },
         {
-          "properties": {
+          "options": {
             "cache_duration": "none",
             "fetch_version": true
           },
@@ -78,7 +75,7 @@
           "style": "plain"
         },
         {
-          "properties": {
+          "options": {
             "cache_duration": "none"
           },
           "template": " \ue28e{{ .Full }}",
@@ -87,7 +84,7 @@
           "style": "plain"
         },
         {
-          "properties": {
+          "options": {
             "cache_duration": "none"
           },
           "template": " \ue753{{ .Full }}",
@@ -96,7 +93,7 @@
           "style": "plain"
         },
         {
-          "properties": {
+          "options": {
             "cache_duration": "none"
           },
           "template": " \ue235{{ .Full }}",
@@ -105,7 +102,7 @@
           "style": "plain"
         },
         {
-          "properties": {
+          "options": {
             "cache_duration": "none",
             "fetch_version": true
           },
@@ -116,7 +113,7 @@
           "style": "plain"
         },
         {
-          "properties": {
+          "options": {
             "cache_duration": "none"
           },
           "template": " 🥟 {{ .Full }}",
@@ -125,18 +122,14 @@
           "style": "plain"
         },
         {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": " \ue7ad{{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
+          "template": " \ue7ad{{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }}",
           "foreground": "#FF9900",
           "powerline_symbol": "\ue0b0",
           "type": "aws",
           "style": "plain"
         },
         {
-          "properties": {
-            "cache_duration": "none",
+          "options": {
             "time_format": "3:04 PM"
           },
           "template": " [{{ .CurrentDate | date .Format }}]",
@@ -151,18 +144,12 @@
       "alignment": "left",
       "segments": [
         {
-          "properties": {
-            "cache_duration": "none"
-          },
           "template": "\ue3bf ",
           "foreground": "#cd5e42",
           "type": "root",
           "style": "plain"
         },
         {
-          "properties": {
-            "cache_duration": "none"
-          },
           "template": "\ud83d\ude80\u2009",
           "foreground": "#bbbbbb",
           "type": "text",
@@ -171,6 +158,5 @@
       ],
       "newline": true
     }
-  ],
-  "version": 3
+  ]
 }
