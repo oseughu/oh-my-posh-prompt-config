@@ -1,7 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "version": 4,
+  "pwd": "{{ if .Env.WT_SESSION }}osc99{{ else }}osc7{{ end }}",
 
+  "cursor_style": "steady_block",
   "blocks": [
     {
       "type": "prompt",
